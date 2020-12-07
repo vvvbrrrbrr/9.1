@@ -5,11 +5,10 @@ const int k=3;
 
 void tuda(int a[][k], int b[])
 {
-    int j;
-    for (j=0; j<n*k; j++)
-    {
-        b[j]=a[j/k][j%k];
-    }
+    int j, i;
+    for (j=0; j<n; j++)
+        for (i=0; i<k; i++)
+            b[j*k+i]=a[j][i];
 }
 void obratno(int b[], int a[][k])
 {
